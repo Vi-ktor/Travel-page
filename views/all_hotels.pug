@@ -1,0 +1,12 @@
+extends layout
+include mixins/_hotel
+
+block content
+    h2= title
+    each hotel in allHotels
+        .hotel_wrapper
+            +hotel(hotel)
+
+    //- p=allHotels displaying all data with regards to the hotel in the database
+    //- p=allHotels[0] calling hotel data individually eg getting hotel 1 to display with all its contents
+    //- p=allHotels[1].hotel_name displays the name of the hotel 
